@@ -1,16 +1,39 @@
 import React from "react";
-import { SvgXml } from "react-native-svg";
-const DollarIcon = createIcon("../assets/icons/dollar-line.svg");
-const WalletAddMoneyIcon = "../assets/icons/add-money-wallet-icon.svg";
-const WalletCardIcon = "../assets/icons/wallet-credit-card.svg";
-const AmazonIcon = "../assets/icons/amazon-outlined.svg";
-const UberIcon = "../assets/icons/brand-uber.svg";
-const AirbnbIcon = "../assets/icons/bxl-airbnb.svg";
-const DollarSignIcon = "../assets/icons/dollar-sign.svg";
-const FigmaIcon = "../assets/icons/logo-figma.svg";
-const ShoopingCartIcon = "../assets/icons/shopping-cart-line.svg";
-const SpotifyIcon = "../assets/icons/spotify-logo-light.svg";
-const NetflixIcon = "../assets/icons/netflix.svg";
+import DollarIconSVG from "../assets/icons/dollar-line.svg";
+import WalletAddMoneyIconSVG from "../assets/icons/add-money-wallet-icon.svg";
+import WalletCardIconSVG from "../assets/icons/wallet-credit-card.svg";
+import AmazonIconSVG from "../assets/icons/amazon-outlined.svg";
+import UberIconSVG from "../assets/icons/brand-uber.svg";
+import AirbnbIconSVG from "../assets/icons/bxl-airbnb.svg";
+import DollarSignIconSVG from "../assets/icons/dollar-sign.svg";
+import FigmaIconSVG from "../assets/icons/logo-figma.svg";
+import ShoopingCartIconSVG from "../assets/icons/shopping-cart-line.svg";
+import SpotifyIconSVG from "../assets/icons/spotify-logo-light.svg";
+import NetflixIconSVG from "../assets/icons/netflix.svg";
+
+
+interface MyIconProps { width?: number, height?: number, color?: string }
+
+const createIcon = (IconComponent: React.ComponentType<any>, displayName: string) => {
+  const Icon = ({ width = 24, height = 24, color = "black" }: MyIconProps) => {
+    return <IconComponent width={width} height={height} fill={color} />;
+  };
+
+  Icon.displayName = displayName;
+  return Icon;
+};
+
+const DollarIcon = createIcon(DollarIconSVG, "DollarIcon")
+const WalletAddMoneyIcon = createIcon(WalletAddMoneyIconSVG, "WalletAddMoneyIcon")
+const WalletCardIcon = createIcon(WalletCardIconSVG, "WalletCardIcon")
+const AmazonIcon = createIcon(AmazonIconSVG, "AmazonIcon")
+const UberIcon = createIcon(UberIconSVG, "UberIcon")
+const AirbnbIcon = createIcon(AirbnbIconSVG, "AirbnbIcon")
+const DollarSignIcon = createIcon(DollarSignIconSVG, "DollarSignIcon")
+const FigmaIcon = createIcon(FigmaIconSVG, "FigmaIcon")
+const ShoopingCartIcon = createIcon(ShoopingCartIconSVG, "ShoopingCartIcon")
+const SpotifyIcon = createIcon(SpotifyIconSVG, "SpotifyIcon")
+const NetflixIcon = createIcon(NetflixIconSVG, "NetflixIcon")
 
 export {
   DollarIcon,
@@ -24,13 +47,4 @@ export {
   ShoopingCartIcon,
   SpotifyIcon,
   NetflixIcon,
-};
-interface MyIconProps { width?: number, height?: number, color?: string }
-
-const createIcon = (path: string, displayName) => {
-  const IconComponent = ({ width = 24, height = 24, color = "black" }: MyIconProps) => {
-    const svgContent = require(path).default;
-    return <SvgXml xml={svgContent} width={width} height={height} color={color} />;
-  };
-  IconComponent.displayName = displayName;
 };
