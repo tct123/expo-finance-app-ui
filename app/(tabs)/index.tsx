@@ -1,16 +1,16 @@
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import React from "react";
-import Colors from "@/constants/Colors";
 import { Stack } from "expo-router";
-import Header from "@/components/Header";
 import { PieChart } from "react-native-gifted-charts";
-import ExpenseBlock from "@/components/ExpenseBlock";
-import IncomeBlock from "@/components/IncomeBlock";
-import SpendingBlock from "@/components/SpendingBlock";
-import ExpenseList from '@/data/expenses.json';
-import incomeList from '@/data/income.json';
-import spendingList from '@/data/spending.json';
- 
+import ExpenseList from '../../data/expenses.json';
+import incomeList from '../../data/income.json';
+import spendingList from '../../data/spending.json';
+import ExpenseBlock from "../../components/ExpenseBlock";
+import Header from "../../components/Header";
+import IncomeBlock from "../../components/IncomeBlock";
+import SpendingBlock from "../../components/SpendingBlock";
+import Colors from "../../constants/Colors";
+
 const Page = () => {
   const pieData = [
     {
@@ -58,7 +58,7 @@ const Page = () => {
                 $1475.<Text style={{ fontSize: 22, fontWeight: 400 }}>00</Text>
               </Text>
             </View>
-            <View style={{paddingVertical:20,alignItems:'center'}}>
+            <View style={{ paddingVertical: 20, alignItems: 'center' }}>
               <PieChart
                 data={pieData}
                 donut

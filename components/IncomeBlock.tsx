@@ -7,17 +7,17 @@ import {
   View,
 } from "react-native";
 import React from "react";
-import Colors from "@/constants/Colors";
-import { IncomeType } from "@/types";
-import { DollarIcon, WalletAddMoneyIcon, WalletCardIcon } from "@/constants/Icons";
 import { Feather } from "@expo/vector-icons";
+import Colors from "../constants/Colors";
+import { DollarIcon, WalletCardIcon, WalletAddMoneyIcon } from "../constants/Icons";
+import { IncomeType } from "../types";
 
 const IncomeBlock = ({ incomeList }: { incomeList: IncomeType[] }) => {
   const renderItem: ListRenderItem<IncomeType> = ({ item }) => {
     let icon = <DollarIcon width={22} height={22} color={Colors.white} />;
-    if ( item.name == 'Freelancing' ) {
+    if (item.name === 'Freelancing') {
       icon = <WalletCardIcon width={22} height={22} color={Colors.white} />
-    } else if (item.name == 'Interest') {
+    } else if (item.name === 'Interest') {
       icon = <WalletAddMoneyIcon width={22} height={22} color={Colors.white} />
     }
 
@@ -51,7 +51,7 @@ const IncomeBlock = ({ incomeList }: { incomeList: IncomeType[] }) => {
           >
             {icon}
           </View>
-          <TouchableOpacity onPress={() => {}}>
+          <TouchableOpacity onPress={() => { }}>
             <Feather name="more-horizontal" size={20} color={Colors.white} />
           </TouchableOpacity>
         </View>

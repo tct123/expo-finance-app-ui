@@ -2,8 +2,8 @@ import React from "react";
 import { Tabs } from "expo-router";
 import { AntDesign, FontAwesome, SimpleLineIcons } from "@expo/vector-icons";
 import { View } from "react-native";
-import Colors from "@/constants/Colors";
 import { StatusBar } from "expo-status-bar";
+import Colors from "../../constants/Colors";
 
 const Layout = () => {
   return (

@@ -39,6 +39,11 @@
     "react-native-svg-transformer": "^1.4.0",
     "react-native-web": "^0.21.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/react": "~19.2.10",
+    "eslint": "^9.0.0",
+    "eslint-config-expo": "~55.0.0",
+    "typescript": "~5.9.2"
+  },
   "private": true
 }

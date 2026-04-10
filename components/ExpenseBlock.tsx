@@ -7,18 +7,18 @@ import {
   View,
 } from "react-native";
 import React from "react";
-import { ExpenseType } from "@/types";
-import Colors from "@/constants/Colors";
 import { Feather } from "@expo/vector-icons";
+import { ExpenseType } from "../types";
+import Colors from "../constants/Colors";
 
 const ExpenseBlock = ({ expenseList }: { expenseList: ExpenseType[] }) => {
   const renderItem: ListRenderItem<Partial<ExpenseType>> = ({
     item,
     index,
   }) => {
-    if (index == 0) {
+    if (index === 0) {
       return (
-        <TouchableOpacity onPress={() => {}}>
+        <TouchableOpacity onPress={() => { }}>
           <View
             style={styles.addItemBtn}
           >
@@ -36,11 +36,11 @@ const ExpenseBlock = ({ expenseList }: { expenseList: ExpenseType[] }) => {
           styles.expenseBlock,
           {
             backgroundColor:
-              item.name == "Food"
+              item.name === "Food"
                 ? Colors.blue
-                : item.name == "Saving"
-                ? Colors.white
-                : Colors.tintColor,
+                : item.name === "Saving"
+                  ? Colors.white
+                  : Colors.tintColor,
           },
         ]}
       >
@@ -49,11 +49,11 @@ const ExpenseBlock = ({ expenseList }: { expenseList: ExpenseType[] }) => {
             styles.expenseBlockTxt1,
             {
               color:
-                item.name == "Food"
+                item.name === "Food"
                   ? Colors.black
-                  : item.name == "Saving"
-                  ? Colors.black
-                  : Colors.white,
+                  : item.name === "Saving"
+                    ? Colors.black
+                    : Colors.white,
             },
           ]}
         >
@@ -64,11 +64,11 @@ const ExpenseBlock = ({ expenseList }: { expenseList: ExpenseType[] }) => {
             styles.expenseBlockTxt2,
             {
               color:
-                item.name == "Food"
+                item.name === "Food"
                   ? Colors.black
-                  : item.name == "Saving"
-                  ? Colors.black
-                  : Colors.white,
+                  : item.name === "Saving"
+                    ? Colors.black
+                    : Colors.white,
             },
           ]}
         >
@@ -81,11 +81,11 @@ const ExpenseBlock = ({ expenseList }: { expenseList: ExpenseType[] }) => {
               styles.expenseBlockTxt1,
               {
                 color:
-                  item.name == "Food"
+                  item.name === "Food"
                     ? Colors.black
-                    : item.name == "Saving"
-                    ? Colors.black
-                    : Colors.white,
+                    : item.name === "Saving"
+                      ? Colors.black
+                      : Colors.white,
               },
             ]}
           >
@@ -99,7 +99,7 @@ const ExpenseBlock = ({ expenseList }: { expenseList: ExpenseType[] }) => {
   const staticItem = [{ name: "Add Item" }];
 
   return (
-    <View style={{paddingVertical: 20}}>
+    <View style={{ paddingVertical: 20 }}>
       <FlatList
         data={staticItem.concat(expenseList)}
         renderItem={renderItem}
@@ -120,9 +120,9 @@ const styles = StyleSheet.create({
     borderStyle: "dashed",
     borderRadius: 10,
     marginRight: 20,
-    padding:20,
+    padding: 20,
     justifyContent: 'center',
-    alignItems:'center'
+    alignItems: 'center'
   },
   expenseBlock: {
     backgroundColor: Colors.tintColor,

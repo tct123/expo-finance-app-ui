@@ -1,16 +1,9 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { SpendingType } from "@/types";
-import Colors from "@/constants/Colors";
-import {
-  AirbnbIcon,
-  AmazonIcon,
-  DollarIcon,
-  FigmaIcon,
-  NetflixIcon,
-  ShoopingCartIcon,
-  SpotifyIcon,
-} from "@/constants/Icons";
+import { SpendingType } from "../types";
+import Colors from "../constants/Colors";
+import { AirbnbIcon, AmazonIcon, DollarIcon, FigmaIcon, NetflixIcon, ShoopingCartIcon, SpotifyIcon } from "../constants/Icons";
+
 
 const SpendingBlock = ({ spendingList }: { spendingList: SpendingType[] }) => {
   let icon = <DollarIcon width={22} height={22} color={Colors.white} />;
@@ -22,17 +15,17 @@ const SpendingBlock = ({ spendingList }: { spendingList: SpendingType[] }) => {
       </Text>
 
       {spendingList.map((item) => {
-        if (item.name == "AirBnB Rent") {
+        if (item.name === "AirBnB Rent") {
           icon = <AirbnbIcon width={22} height={22} color={Colors.white} />;
-        } else if (item.name == "Netflix") {
+        } else if (item.name === "Netflix") {
           icon = <NetflixIcon width={22} height={22} color={Colors.white} />;
-        } else if (item.name == "Spotify") {
+        } else if (item.name === "Spotify") {
           icon = <SpotifyIcon width={22} height={22} color={Colors.white} />;
-        } else if (item.name == "Amazon") {
+        } else if (item.name === "Amazon") {
           icon = <AmazonIcon width={22} height={22} color={Colors.white} />;
-        } else if (item.name == "Figma") {
+        } else if (item.name === "Figma") {
           icon = <FigmaIcon width={22} height={22} color={Colors.white} />;
-        } else if (item.name == "Online Shopping") {
+        } else if (item.name === "Online Shopping") {
           icon = (
             <ShoopingCartIcon width={22} height={22} color={Colors.white} />
           );

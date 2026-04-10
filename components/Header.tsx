@@ -1,7 +1,7 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import Colors from "@/constants/Colors";
+import Colors from "../constants/Colors";
 
 const Header = () => {
   return (
@@ -22,7 +22,7 @@ const Header = () => {
           </View>
         </View>
         <TouchableOpacity
-          onPress={() => {}}
+          onPress={() => { }}
           style={styles.btnWrapper}
         >
           <Text style={styles.btnText}>
@@ -37,9 +37,9 @@ const Header = () => {
 export default Header;
 
 const styles = StyleSheet.create({
-  container: { 
-    flex: 1, 
-    backgroundColor: Colors.black, 
+  container: {
+    flex: 1,
+    backgroundColor: Colors.black,
   },
   wrapper: {
     flexDirection: "row",
@@ -48,23 +48,23 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingHorizontal: 20,
   },
-  userInfoWrapper: { 
-    flexDirection: "row", 
-    alignItems: "center", 
+  userInfoWrapper: {
+    flexDirection: "row",
+    alignItems: "center",
   },
-  userImg: { 
-    height: 50, 
-    width: 50, 
-    borderRadius: 30, 
+  userImg: {
+    height: 50,
+    width: 50,
+    borderRadius: 30,
   },
   userTxtWrapper: {
-    marginLeft:10,
+    marginLeft: 10,
   },
   userText: {
     color: Colors.white,
   },
   boldText: {
-    fontWeight:'700',
+    fontWeight: '700',
   },
   btnWrapper: {
     borderColor: "#666",
@@ -72,8 +72,8 @@ const styles = StyleSheet.create({
     padding: 8,
     borderRadius: 10,
   },
-  btnText: { 
-    color: Colors.white, 
+  btnText: {
+    color: Colors.white,
     fontSize: 12,
   },
 });
