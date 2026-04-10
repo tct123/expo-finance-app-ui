@@ -16,11 +16,11 @@ const shoopingCartIcon = require("../assets/icons/shopping-cart-line.svg");
 const spotifyIcon = require("../assets/icons/spotify-logo-light.svg");
 const netflixIcon = require("../assets/icons/netflix.svg");
 
-const createIcon = (svgContent: string, displayName: string) => {
+const createIcon = (svgContent: any, displayName: string) => {
   const IconComponent = ({ width = 24, height = 24, color = 'black' }: MyIconProps) => {
-    const coloredSvgContent = typeof svgContent === 'string'
-      ? svgContent.replace(/fill="currentColor"/g, `fill="${color}"`)
-      : svgContent.default.replace(/fill="currentColor"/g, `fill="${color}"`);
+    // Extrahiere den SVG-Inhalt als String
+    const svgString = typeof svgContent === 'string' ? svgContent : svgContent.default;
+    const coloredSvgContent = svgString.replace(/fill="currentColor"/g, `fill="${color}"`);
     return <SvgXml xml={coloredSvgContent} width={width} height={height} />;
   };
   IconComponent.displayName = displayName;
