@@ -4,10 +4,20 @@ import { SvgXml } from "react-native-svg";
 
 interface MyIconProps { width?: number, height?: number, color?: string }
 
-const createIcon = (svgPath: string, displayName: string) => {
+const dollarIcon = require("../assets/icons/dollar-line.svg");
+const walletAddMoneyIcon = require("../assets/icons/add-money-wallet-icon.svg")
+const walletCardIcon = require("../assets/icons/wallet-credit-card.svg");
+const amazonIcon = require("../assets/icons/amazon-outlined.svg");
+const uberIcon = require("../assets/icons/brand-uber.svg");
+const airbnbIcon = require("../assets/icons/bxl-airbnb.svg");
+const dollarSignIcon = require("../assets/icons/dollar-sign.svg");
+const figmaIcon = require("../assets/icons/logo-figma.svg");
+const shoopingCartIcon = require("../assets/icons/shopping-cart-line.svg");
+const spotifyIcon = require("../assets/icons/spotify-logo-light.svg");
+const netflixIcon = require("../assets/icons/netflix.svg");
+
+const createIcon = (svgContent: string, displayName: string) => {
   const IconComponent = ({ width = 24, height = 24, color = 'black' }: MyIconProps) => {
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    const svgContent = require(svgPath);
     const coloredSvgContent = typeof svgContent === 'string'
       ? svgContent.replace(/fill="currentColor"/g, `fill="${color}"`)
       : svgContent.default.replace(/fill="currentColor"/g, `fill="${color}"`);
@@ -17,17 +27,17 @@ const createIcon = (svgPath: string, displayName: string) => {
   return IconComponent;
 };
 
-const DollarIcon = createIcon("../assets/icons/dollar-line.svg", "DollarIcon")
-const WalletAddMoneyIcon = createIcon("../assets/icons/add-money-wallet-icon.svg", "WalletAddMoneyIcon")
-const WalletCardIcon = createIcon("../assets/icons/wallet-credit-card.svg", "WalletCardIcon")
-const AmazonIcon = createIcon("../assets/icons/amazon-outlined.svg", "AmazonIcon")
-const UberIcon = createIcon("../assets/icons/brand-uber.svg", "UberIcon")
-const AirbnbIcon = createIcon("../assets/icons/bxl-airbnb.svg", "AirbnbIcon")
-const DollarSignIcon = createIcon("../assets/icons/dollar-sign.svg", "DollarSignIcon")
-const FigmaIcon = createIcon("../assets/icons/logo-figma.svg", "FigmaIcon")
-const ShoopingCartIcon = createIcon("../assets/icons/shopping-cart-line.svg", "ShoopingCartIcon")
-const SpotifyIcon = createIcon("../assets/icons/spotify-logo-light.svg", "SpotifyIcon")
-const NetflixIcon = createIcon("../assets/icons/netflix.svg", "NetflixIcon")
+const DollarIcon = createIcon(dollarIcon, "DollarIcon")
+const WalletAddMoneyIcon = createIcon(walletAddMoneyIcon, "WalletAddMoneyIcon")
+const WalletCardIcon = createIcon(walletCardIcon, "WalletCardIcon")
+const AmazonIcon = createIcon(amazonIcon, "AmazonIcon")
+const UberIcon = createIcon(uberIcon, "UberIcon")
+const AirbnbIcon = createIcon(airbnbIcon, "AirbnbIcon")
+const DollarSignIcon = createIcon(dollarSignIcon, "DollarSignIcon")
+const FigmaIcon = createIcon(figmaIcon, "FigmaIcon")
+const ShoopingCartIcon = createIcon(shoopingCartIcon, "ShoopingCartIcon")
+const SpotifyIcon = createIcon(spotifyIcon, "SpotifyIcon")
+const NetflixIcon = createIcon(netflixIcon, "NetflixIcon")
 
 export {
   DollarIcon,
