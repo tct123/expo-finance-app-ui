@@ -1,15 +1,4 @@
 import React from "react";
-import DollarIconSVG from "../assets/icons/dollar-line.svg";
-import WalletAddMoneyIconSVG from "../assets/icons/add-money-wallet-icon.svg";
-import WalletCardIconSVG from "../assets/icons/wallet-credit-card.svg";
-import AmazonIconSVG from "../assets/icons/amazon-outlined.svg";
-import UberIconSVG from "../assets/icons/brand-uber.svg";
-import AirbnbIconSVG from "../assets/icons/bxl-airbnb.svg";
-import DollarSignIconSVG from "../assets/icons/dollar-sign.svg";
-import FigmaIconSVG from "../assets/icons/logo-figma.svg";
-import ShoopingCartIconSVG from "../assets/icons/shopping-cart-line.svg";
-import SpotifyIconSVG from "../assets/icons/spotify-logo-light.svg";
-import NetflixIconSVG from "../assets/icons/netflix.svg";
 import { SvgXml } from "react-native-svg";
 
 
